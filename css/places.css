@@ -1,0 +1,47 @@
+*{
+	font: 1em Roboto;
+}
+a{
+  text-decoration: none;
+  color: darkorange;
+}
+a:hover{
+  text-decoration: overline;
+}
+.container{
+	width: 80%;
+	margin: 0 auto;
+}
+.container .full-div{
+	width: 100%;
+	display: flex;
+}
+.container .image-div{
+	width: 35%;
+}
+.container .image-div img{
+	width: 100%;
+	padding-top: 28px;
+}
+.container .para-content{
+	width: 65%;
+	padding: 0 0 30px 20px;
+	font-size: .88em;
+	text-align: justify;
+}
+.container .para-content h3{
+	font-weight: bolder;
+	color: #27bcad;
+	font-size: 22px;
+	padding: 0;
+}
+.container .para-content .para-content-link{
+	padding: 5px 10px;
+	border: 2px solid orange;
+	transition: .2s linear;
+}
+.container .para-content .para-content-link:hover{
+	text-decoration: none;
+	background-color: orange;
+	color: #000;
+}

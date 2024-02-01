@@ -1,0 +1,42 @@
+body, html{
+  margin: 0;
+  padding: 0;
+  font: 1em Roboto;
+}
+
+nav{
+  width: 100%;
+  height: auto;
+  color: #fff;
+  z-index: 999;
+}
+.upper_navbar{
+  background-color: #112255; 
+}
+.menu1{
+  width: 90%;
+  margin: 0 auto;
+}
+.menu1 ul{
+  padding: 0;
+  margin: 0;
+  display: inline-flex;
+}
+.menu1 ul li{
+  list-style-type: none;
+  display: inline-block;
+  line-height: 40px;
+  padding: 0px 20px;
+}
+.menu1 ul li a{
+  color: #fff;
+  font-size: 10pt;
+  text-decoration: none;
+}
+.menu1 ul li:hover{
+  background-color: #0a9cc9;
+  transition: 0.3s;
+}
+.menu-icon{
+  display: none;
+}

@@ -1,0 +1,8 @@
+.container {
+            max-width: 768px;
+            margin: 0 auto;
+        }
+        h1 {
+        	padding-top: 4.5%;
+            text-align: center;
+        }

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/todo.css">
+    <link rel="stylesheet" type="text/css" href="css/nav.css">
+    <link rel="stylesheet" type="text/css" href="css/footer.css">
+    <title>To-Do | Pearl of the Indian Ocean</title>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css">
+
+</head>
+<body>
+    <section>
+        <header>
+            <nav>
+                <div class="upper_navbar">
+                    <div class="menu1">
+                        <ul>
+                            <li><a href="index.html">Home</a></li>                      
+                            <li><a href="todo.html">To-Do List</a></li>
+                            <li><a href="places.html">Tourist Places</a></li>
+                            <li><a href="contact.html">Contact Us</a></li>
+                            <li><a href="about.html">About Us</a></li>
+                        </ul>
+                    </div>
+                </div>
+                </div>
+            </nav>
+        </header>
+    </section>
+    <div id="app" class="container">
+        <h1>Pearl of the Indian Ocean | To-do List</h1>
+
+        <div v-if="!isEditing">
+            <input type="text" v-model="todo">
+            <input type="submit" value="Add" @click="storeTodo">
+        </div>
+        <div v-else>
+            <input type="text" v-model="todo">
+            <input type="submit" value="Update" @click="updateTodo">
+        </div>
+
+        <ol>
+            <li v-for="(todo, index) in todos">
+                {{ todo }}
+                <button @click="editTodo(index, todo)">Edit</button>
+                <button @click="removeTodo(index)">Delete</button>
+            </li>
+        </ol>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
+    <script src="js/todo.js"></script>
+    <section>
+        <div class="footer">
+            <div class="footer-content">
+                <div class="footer-refs-content-1">
+                    <h5>Tourism <b>Agencies</b></h5>
+                    <ul>
+                        <li><a href="">Sri Lanka Tourism Promotion Bureau</a></li>
+                        <li><a href="">Sri Lanka Tourism Development Authority</a></li>
+                        <li><a href="">Sri Lanka Convention Bureau</a></li>
+                        <li><a href="">SLITHM (Sri Lanka Institute of Tourism & Hotel Management)</a></li>
+                        <li><a href="">Ministry of Tourism Development & Christian Religious Affairs</a></li>
+                    </ul>
+                </div>
+                <div class="footer-refs-content-2">
+                    <h5>Our <b>Partners</b></h5>
+                    <ul>
+                        <li><a href="">Sri Lanka Airport & Aviation Services</a></li>
+                        <li><a href="">Department of Immigration & Emigration</a></li>
+                        <li><a href="">Belihuloya Hotel Corporation</a></li>
+                    </ul>
+                </div>
+                <div class="footer-refs-content-3">
+                    <h5>About the <b>Site</b></h5>
+                    <ul>
+                        <li><a href="">Terms & Conditions</a></li>
+                        <li><a href="">Privacy Policy</a></li>
+                        <li><a href="">Site Map</a></li></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="lower-footer">
+                <div class="lower-footer-content">
+                    <div id="footer-align-left">
+                        All Rights Reserved. © 2022 pearlocean.lk
+                    </div>
+                    <div id="footer-align-right">
+                        <a href=""><i class="fab fa-facebook-square fa-3x"></i></a>
+                        <a href=""><i class="fab fa-twitter-square fa-3x"></i></a>
+                        <a href=""><i class="fab fa-google-plus-square fa-3x"></i></a>
+                        <a href=""><i class="fab fa-youtube-square fa-3x"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="js/function.js"></script>
+</body>
+</html>
